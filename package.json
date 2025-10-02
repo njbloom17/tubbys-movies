@@ -12,6 +12,7 @@
     "deploy": "gh-pages -d build"
   },
   "dependencies": {
+    "@mui/material": "^7.3.3",
     "@types/react": "^19.1.16",
     "react": "^19.1.1",
     "react-dom": "^19.1.1"
