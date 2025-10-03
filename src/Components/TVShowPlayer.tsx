@@ -24,7 +24,7 @@ export const TVShowPlayer = ({
       height="600"
       sandbox="allow-modals allow-scripts allow-top-navigation-by-user-activation allow-same-origin allow-orientation-lock"
       frameborder="0"
-      allowfullscreen
+      allowFullscreen
     />
   );
 };

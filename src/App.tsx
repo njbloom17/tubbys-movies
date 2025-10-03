@@ -2,27 +2,22 @@ import React, { useState, useRef } from "react";
 import "./App.css";
 import { MoviePlayer } from "./Components/MoviePlayer";
 import { TVShowPlayer } from "./Components/TVShowPlayer";
-
-export type Movie = {
-  id: number;
-  title: string;
-};
+import { useTopRatedMovies } from "./hooks/useMovies";
+import { MovieCard } from "./Components/MovieCard";
+import { Movie } from "./types/movie";
 
 export const App = () => {
-  const [watch, setWatch] = useState("movie");
+  const [movie, setMovie] = useState(1);
+  const movies = useTopRatedMovies();
   return (
     <>
-      Welcome to Tubby's Movies!
+      <div>Welcome to Tubby's Movies!</div>
+      <br />
+      {movies.map((mov) => (
+        <MovieCard movie={mov} onClick={() => setMovie(mov.id)} />
+      ))}
       <div>
-        <button onClick={() => setWatch("movie")}>Watch a movie!</button>
-        <div></div>
-        <button onClick={() => setWatch("show")}>Watch a TV Show!</button>
-      </div>
-      <div>
-        {watch === "movie" && <MoviePlayer movieId="10315" />}
-        {watch === "show" && (
-          <TVShowPlayer showId="1668" season="2" episode="4" />
-        )}
+        <MoviePlayer movieId={movie} />
       </div>
     </>
   );
