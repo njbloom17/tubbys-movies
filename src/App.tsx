@@ -9,6 +9,7 @@ import { Movie } from "./types/movie";
 export const App = () => {
   const [movie, setMovie] = useState(1);
   const movies = useTopRatedMovies();
+  const [password, setPassword] = useState("");
   return (
     <>
       <div>Welcome to Tubby's Movies!</div>
@@ -16,9 +17,7 @@ export const App = () => {
       {movies.map((mov) => (
         <MovieCard movie={mov} onClick={() => setMovie(mov.id)} />
       ))}
-      <div>
-        <MoviePlayer movieId={movie} />
-      </div>
+      <div>{/* <MoviePlayer movieId={movie} /> */}</div>
     </>
   );
 };
