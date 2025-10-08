@@ -1,5 +1,5 @@
 import React from "react";
-import { Movie } from "../types/movie";
+import { type Movie } from "../types/movie";
 
 export interface MovieCardProps {
   movie: Movie;
@@ -8,11 +8,12 @@ export interface MovieCardProps {
 
 export const MovieCard = ({ movie, onClick }: MovieCardProps) => {
   const baseUrl = "https://image.tmdb.org/t/p/";
-  const size = "w342/";
+  const size = "w185/";
+  const img = movie.backdrop_path;
   return (
     <button onClick={onClick}>
       <div>{movie.title}</div>
-      <img src={baseUrl + size + movie.backdrop_path} />
+      {img && <img src={baseUrl + size + img} />}
     </button>
   );
 };

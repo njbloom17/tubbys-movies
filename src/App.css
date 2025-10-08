@@ -11,6 +11,7 @@
   will-change: filter;
   transition: filter 300ms;
 }
+
 .logo:hover {
   filter: drop-shadow(0 0 2em #646cffaa);
 }
@@ -39,4 +40,23 @@
 
 .read-the-docs {
   color: #888;
+}
+
+.text-fields {
+  display: flex;
+  padding: 24px;
+  gap: 10px;
+}
+
+.movie-grid {
+  width: 100vw;
+  display: grid;
+  grid-template-columns: repeat(5, 250.67px);
+  gap: 12px;
+}
+
+.title {
+  width: 100vw;
+  font-weight: 800;
+  font-size: 36px;
 }
