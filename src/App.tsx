@@ -21,6 +21,7 @@ export const App = () => {
   const searchMovies = useSearchMovies(text);
   const topRated = useTopRatedMovies();
   const movies = text ? searchMovies : topRated;
+
   return (
     <div style={{ position: "absolute", top: "24px", left: "64px" }}>
       <div className="title">

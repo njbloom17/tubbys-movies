@@ -10,8 +10,7 @@ const fetchLinkResponse = async (link: string) => {
     method: "GET",
     headers: {
       accept: "application/json",
-      Authorization:
-        "Bearer eyJhbGciOiJIUzI1NiJ9.eyJhdWQiOiI1N2I5YTFmZDZkNmMzNWRjNGRjN2RiYThiYzY2NjllMiIsIm5iZiI6MTc1OTM4MzkzNC43NjEsInN1YiI6IjY4ZGUxMTdlZWQ0OTZlODNmNTQwNWI0OSIsInNjb3BlcyI6WyJhcGlfcmVhZCJdLCJ2ZXJzaW9uIjoxfQ.Is1GufhjdB3hiy22pP4tvI---Dp8AdtiH-burqyhdRM",
+      Authorization: `Bearer ${import.meta.env.VITE_TMDB_READ_ACCESS_TOKEN}`,
     },
   };
 
