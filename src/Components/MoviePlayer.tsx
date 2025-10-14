@@ -1,4 +1,5 @@
 import { useEffect } from "react";
+import { TMDB_TOKEN } from "../App";
 export interface MoviePlayerProps {
   movieId: string;
   link: string;
@@ -10,7 +11,7 @@ const fetchLinkResponse = async (link: string) => {
     method: "GET",
     headers: {
       accept: "application/json",
-      Authorization: `Bearer ${import.meta.env.VITE_TMDB_READ_ACCESS_TOKEN}`,
+      Authorization: `Bearer ${TMDB_TOKEN}`,
     },
   };
 

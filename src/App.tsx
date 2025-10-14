@@ -11,6 +11,8 @@ import { useSearchMovies, useTopRatedMovies } from "./hooks/useMovies";
 import { MovieCard } from "./Components/MovieCard";
 import { type Movie } from "./types/movie.ts";
 
+export const TMDB_TOKEN = import.meta.env.VITE_TMDB_READ_ACCESS_TOKEN;
+
 export const App = () => {
   const [userPass, setUserPass] = useState("");
   const [selectedTab, setSelectedTab] = useState(0);
