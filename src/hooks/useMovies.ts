@@ -18,7 +18,7 @@ export const useTopRatedMovies = (): Movie[] => {
         method: "GET",
         headers: {
           accept: "application/json",
-          Authorization: `Bearer ${TMDB_TOKEN}`,
+          Authorization: `Bearer eyJhbGciOiJIUzI1NiJ9.eyJhdWQiOiJhYzkwYmI1Y2JlMzNkZTRhMGI2ZmJmMDFlMjYxZWI2ZCIsIm5iZiI6MTc1OTM4MzkzNC43NjEsInN1YiI6IjY4ZGUxMTdlZWQ0OTZlODNmNTQwNWI0OSIsInNjb3BlcyI6WyJhcGlfcmVhZCJdLCJ2ZXJzaW9uIjoxfQ.vnQfKwiHDb4XhxpJZwmgx3tL6HSln9QDiST0PsAftcQ`,
         },
       };
 
@@ -43,7 +43,7 @@ export const useSearchMovies = (movieQuery: string): Movie[] => {
         method: "GET",
         headers: {
           accept: "application/json",
-          Authorization: `Bearer ${TMDB_TOKEN}`,
+          Authorization: `Bearer eyJhbGciOiJIUzI1NiJ9.eyJhdWQiOiJhYzkwYmI1Y2JlMzNkZTRhMGI2ZmJmMDFlMjYxZWI2ZCIsIm5iZiI6MTc1OTM4MzkzNC43NjEsInN1YiI6IjY4ZGUxMTdlZWQ0OTZlODNmNTQwNWI0OSIsInNjb3BlcyI6WyJhcGlfcmVhZCJdLCJ2ZXJzaW9uIjoxfQ.vnQfKwiHDb4XhxpJZwmgx3tL6HSln9QDiST0PsAftcQ`,
         },
       };
 
